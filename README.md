@@ -21,6 +21,7 @@ El caso de estudio se centra en el conjunto de datos **"Reporte Delito Terrorism
 ## Estructura del repositorio
 
 ├── tarea3_batch.py # Procesamiento batch con Spark
+
 ├── kafka_producer.py # Productor de datos simulados (Kafka)
 ├── spark_streaming_consumer.py # Consumidor Spark Streaming
 ├── README.md
