@@ -7,7 +7,7 @@
 
 ---
 
-## Descripción
+# Descripción
 
 Este repositorio contiene el código desarrollado para la Tarea 3 del curso de Big Data, que aborda el análisis espacio tiempo de incidentes de terrorismo en Colombia utilizando Hadoop, Spark y Kafka.
 
@@ -18,7 +18,7 @@ El caso de estudio se centra en el conjunto de datos **"Reporte Delito Terrorism
 
 ---
 
-### ¿Qué hace el código?
+# ¿Qué hace el código?
 
 El script `tarea3_batch.py` realiza las siguientes operaciones sobre el dataset:
 
@@ -38,7 +38,7 @@ El script `tarea3_batch.py` realiza las siguientes operaciones sobre el dataset:
 
 Adicionalmente, el repositorio incluye los scripts de **procesamiento en tiempo real** (`kafka_producer.py` y `spark_streaming_consumer.py`) desarrollados a partir del Anexo 3.
 
-## Estructura del repositorio
+# Estructura del repositorio
 
     ├── tarea3_batch.py # Procesamiento batch con Spark
     
@@ -55,7 +55,7 @@ Adicionalmente, el repositorio incluye los scripts de **procesamiento en tiempo 
         ├── mapa_calor_anio_mes.png
         └── evolucion_armas_por_anio.png
 
-## Nota
+### Nota
 Para el desarrollo del script de procesamiento batch (tarea3_batch.py), el autor se apoyó en un asistente de IA (DeepSeek) como Tools de consulta para:
 Resolver dudas sobre la sintaxis de PySpark y matplotlib.
 
@@ -67,7 +67,7 @@ Todo el código fue revisado, comprendido y adaptado por el autor para ajustarse
 
 ---
 
-## Requisitos previos
+# Requisitos previos
 
 Para ejecutar el código se requiere un entorno con las siguientes herramientas instaladas:
 
@@ -77,15 +77,15 @@ Para ejecutar el código se requiere un entorno con las siguientes herramientas 
 - **Apache Kafka 3.9.2** (solo para el componente de streaming)
 - **Python 3.10+**
 
-### Librerías Python necesarias
+# Librerías Python necesarias
 
 ```bash
 pip install pyspark==3.5.1 kafka-python matplotlib numpy pandas
 ```
 ---
-## Instrucciones de ejecución
+# Instrucciones de ejecución
 
-# 1. Iniciar Hadoop (HDFS + YARN)
+## 1. Iniciar Hadoop (HDFS + YARN)
 ```
 su - hadoop
 start-all.sh
@@ -115,5 +115,6 @@ sudo /opt/Kafka/bin/kafka-server-start.sh /opt/Kafka/config/server.properties &
 /opt/Kafka/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 \
   --replication-factor 1 --partitions 1 --topic sensor_data
 ```
-### Proceso de ejecucion en la terminal
-```python3 kafka_producer.py``` --> ```spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.3 spark_streaming_consumer.py```
+## Proceso de ejecucion en la terminal
+primero ejecutar ```python3 kafka_producer.py``` 
+despues se ejecuta ```spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.3 spark_streaming_consumer.py```
