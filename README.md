@@ -23,9 +23,13 @@ El caso de estudio se centra en el conjunto de datos **"Reporte Delito Terrorism
 ├── tarea3_batch.py # Procesamiento batch con Spark
 
 ├── kafka_producer.py # Productor de datos simulados (Kafka)
+
 ├── spark_streaming_consumer.py # Consumidor Spark Streaming
+
 ├── README.md
+
 └── graficos/ # Gráficos generados
+
     ├── top_departamentos.png
     ├── incidentes_por_anio.png
     ├── mapa_calor_anio_mes.png
