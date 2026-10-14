@@ -20,17 +20,28 @@ El caso de estudio se centra en el conjunto de datos **"Reporte Delito Terrorism
 
 ## Estructura del repositorio
 
-├── tarea3_batch.py # Procesamiento batch con Spark
+    ├── tarea3_batch.py # Procesamiento batch con Spark
+    
+    ├── kafka_producer.py # Productor de datos simulados (Kafka)
+    
+    ├── spark_streaming_consumer.py # Consumidor Spark Streaming
+    
+    ├── README.md
+    
+    └── graficos/ # Gráficos generados
 
-├── kafka_producer.py # Productor de datos simulados (Kafka)
+        ├── top_departamentos.png
+        ├── incidentes_por_anio.png
+        ├── mapa_calor_anio_mes.png
+        └── evolucion_armas_por_anio.png
 
-├── spark_streaming_consumer.py # Consumidor Spark Streaming
+## Nota
+Para el desarrollo del script de procesamiento batch (tarea3_batch.py), el autor se apoyó en un asistente de inteligencia artificial (DeepSeek) como herramienta de consulta para:
 
-├── README.md
+Resolver dudas sobre la sintaxis de PySpark y matplotlib.
 
-└── graficos/ # Gráficos generados
+Depurar errores de indentación y tipos de datos.
 
-    ├── top_departamentos.png
-    ├── incidentes_por_anio.png
-    ├── mapa_calor_anio_mes.png
-    └── evolucion_armas_por_anio.png
+Optimizar la estructura del código para mejorar su legibilidad.
+
+Todo el código fue revisado, comprendido y adaptado por el autor para ajustarse a los requerimientos del caso de estudio. el modelo de negocio, la selección del dataset, el diseño de las visualizaciones y la interpretación de los resultados.
